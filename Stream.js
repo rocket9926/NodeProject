@@ -16,6 +16,7 @@ server.on("request", (req, res) => {
   // Sloution 2 Stream
 
   const readble = fs.createReadStream("./txt/final.txt");
+  console.log(readble);
 
   readble.on("data", (chunk) => {
     res.write(chunk);
